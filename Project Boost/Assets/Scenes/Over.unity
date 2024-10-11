@@ -1409,22 +1409,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocket
       objectReference: {fileID: 0}
-    - target: {fileID: 4803959124054229123, guid: 6079a85fe244f8948bc985bd998238fb, type: 3}
-      propertyPath: crash
-      value: 
-      objectReference: {fileID: 8300000, guid: da031e2b6e13d6f479f83430ea18bf9c, type: 3}
-    - target: {fileID: 4803959124054229123, guid: 6079a85fe244f8948bc985bd998238fb, type: 3}
-      propertyPath: success
-      value: 
-      objectReference: {fileID: 8300000, guid: 997afe87a109e8d41b363ceac0002b93, type: 3}
-    - target: {fileID: 4803959124054229123, guid: 6079a85fe244f8948bc985bd998238fb, type: 3}
-      propertyPath: effectsAudioSource
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4803959124054229123, guid: 6079a85fe244f8948bc985bd998238fb, type: 3}
-      propertyPath: obstacleCollisionClip
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5833186805917610931, guid: 6079a85fe244f8948bc985bd998238fb, type: 3}
       propertyPath: fuelText
       value: 

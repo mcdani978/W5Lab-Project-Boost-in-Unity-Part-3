@@ -18,7 +18,7 @@ public class Movement : MonoBehaviour
     AudioSource audioSource;
     [SerializeField] AudioClip mainEngine;
 
-    bool isAlive;
+ 
 
     void Start()
     {

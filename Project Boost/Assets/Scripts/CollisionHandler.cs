@@ -18,6 +18,8 @@ public class CollisionHandler : MonoBehaviour
 
     AudioSource audioSource;
 
+    bool isTransitioning  = false;
+
   
     void Start()
     {
@@ -35,31 +37,41 @@ public class CollisionHandler : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        switch (other.gameObject.tag)
+        if (isTransitioning)
         {
-            case "Friendly":
-                Debug.Log("This thing is friendly");
-                break;
-            case "Finish":
-                StartSuccessSequence();
-                break;
-            case "Fuel":
-                Debug.Log("You picked up fuel");
-                break;
-            case "Transporter":
-                TransportPlayer();
-                PlayTransporterSound();
-                break;
-            default:
-                Debug.Log("Sorry, you blew up!");
-                PlayObstacleCollisionSound();
-                StartCrashSequence();
-                break;
+            return;
         }
+        
+            switch (other.gameObject.tag)
+            {
+
+
+                case "Friendly":
+                    Debug.Log("This thing is friendly");
+                    break;
+                case "Finish":
+                    StartSuccessSequence();
+                    break;
+                case "Fuel":
+                    Debug.Log("You picked up fuel");
+                    break;
+                case "Transporter":
+                    TransportPlayer();
+                    PlayTransporterSound();
+                    break;
+                default:
+                    Debug.Log("Sorry, you blew up!");
+                    PlayObstacleCollisionSound();
+                    StartCrashSequence();
+                    break;
+            }
+        
     }
 
     void StartSuccessSequence()
     {
+        isTransitioning = true;
+        audioSource.Stop();
         audioSource.PlayOneShot(success);
         GetComponent<Movement>().enabled = false;
         Invoke("LoadNextLevel", LevelLoadDelay);
@@ -67,6 +79,8 @@ public class CollisionHandler : MonoBehaviour
 
     void StartCrashSequence()
     {
+        isTransitioning = true;
+        audioSource.Stop();
         audioSource.PlayOneShot(crash);
         GetComponent<Movement>().enabled = false;
         Invoke("ReloadLevel", LevelLoadDelay);

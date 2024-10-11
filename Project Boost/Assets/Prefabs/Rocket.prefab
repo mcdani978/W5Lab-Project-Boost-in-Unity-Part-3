@@ -268,6 +268,8 @@ MonoBehaviour:
   rocketAudioSource: {fileID: 0}
   effectsAudioSource: {fileID: 0}
   transporterClip: {fileID: 8300000, guid: e3aad6f800f37634590f204a49f82daf, type: 3}
-  obstacleCollisionClip: {fileID: 8300000, guid: 88280a8d12ac81c42ad812408cfd52ce, type: 3}
+  obstacleCollisionClip: {fileID: 0}
   fadeImage: {fileID: 0}
   fadeDuration: 1
+  success: {fileID: 8300000, guid: 997afe87a109e8d41b363ceac0002b93, type: 3}
+  crash: {fileID: 8300000, guid: da031e2b6e13d6f479f83430ea18bf9c, type: 3}
