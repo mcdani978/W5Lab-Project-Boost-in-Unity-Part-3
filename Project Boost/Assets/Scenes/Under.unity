@@ -1535,12 +1535,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1342338795}
     - target: {fileID: 8070179868505884298, guid: 6079a85fe244f8948bc985bd998238fb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070179868505884298, guid: 6079a85fe244f8948bc985bd998238fb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070179868505884298, guid: 6079a85fe244f8948bc985bd998238fb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070179868505884298, guid: 6079a85fe244f8948bc985bd998238fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.75
+      value: -5.44
       objectReference: {fileID: 0}
     - target: {fileID: 8070179868505884298, guid: 6079a85fe244f8948bc985bd998238fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 2.29
       objectReference: {fileID: 0}
     - target: {fileID: 8070179868505884298, guid: 6079a85fe244f8948bc985bd998238fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1599,11 +1611,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fecbe1b8bde09b4a8dd5620b27d98e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelLoadDelay: 2
   transportDistance: 3
   rocketAudioSource: {fileID: 5985677814847938581}
   effectsAudioSource: {fileID: 5985677814847938581}
   transporterClip: {fileID: 8300000, guid: e3aad6f800f37634590f204a49f82daf, type: 3}
   obstacleCollisionClip: {fileID: 8300000, guid: 88280a8d12ac81c42ad812408cfd52ce, type: 3}
+  fadeImage: {fileID: 0}
+  fadeDuration: 1
+  success: {fileID: 0}
+  crash: {fileID: 0}
 --- !u!82 &5985677814847938581 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 352254473849338825, guid: 6079a85fe244f8948bc985bd998238fb, type: 3}
