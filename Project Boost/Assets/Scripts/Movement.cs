@@ -12,18 +12,17 @@ public class Movement : MonoBehaviour
     public float rotationSpeed = 100f;
     public float moveSpeed = 5f;
 
-    public float fuel = 100f; 
-    public float fuelConsumptionRate = 10f; 
+    public float fuel = 100f;
+    public float fuelConsumptionRate = 10f;
     public TextMeshProUGUI fuelText;
     AudioSource audioSource;
     [SerializeField] AudioClip mainEngine;
 
- 
-
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        UpdateFuelText(); 
+        rb.constraints = RigidbodyConstraints.FreezePositionZ; // Freeze Z position
+        UpdateFuelText();
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -36,7 +35,7 @@ public class Movement : MonoBehaviour
 
     void ProcessThrust()
     {
-        if (Input.GetKey(KeyCode.Space) && fuel > 0) 
+        if (Input.GetKey(KeyCode.Space) && fuel > 0)
         {
             rb.AddRelativeForce(Vector3.up * thrustForce);
             ConsumeFuel();
@@ -45,9 +44,7 @@ public class Movement : MonoBehaviour
             {
                 audioSource.PlayOneShot(mainEngine);
             }
-
         }
-
         else
         {
             audioSource.Stop();
@@ -68,7 +65,7 @@ public class Movement : MonoBehaviour
         {
             transform.Rotate(Vector3.forward * rotationThisFrame);
         }
-        else if(Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.Rotate(-Vector3.forward * rotationThisFrame);
         }
@@ -90,13 +87,13 @@ public class Movement : MonoBehaviour
 
     void ConsumeFuel() // Method to reduce fuel
     {
-        fuel -= fuelConsumptionRate * Time.deltaTime; 
-        fuel = Mathf.Clamp(fuel, 0, 100); 
-        UpdateFuelText(); 
+        fuel -= fuelConsumptionRate * Time.deltaTime;
+        fuel = Mathf.Clamp(fuel, 0, 100);
+        UpdateFuelText();
     }
 
-    void UpdateFuelText() 
+    void UpdateFuelText()
     {
-        fuelText.text = "Fuel: " + Mathf.RoundToInt(fuel).ToString(); 
+        fuelText.text = "Fuel: " + Mathf.RoundToInt(fuel).ToString();
     }
 }
