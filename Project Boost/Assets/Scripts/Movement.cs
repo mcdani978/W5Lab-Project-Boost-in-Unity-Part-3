@@ -16,6 +16,9 @@ public class Movement : MonoBehaviour
     public float fuelConsumptionRate = 10f; 
     public TextMeshProUGUI fuelText;
     AudioSource audioSource;
+    [SerializeField] AudioClip mainEngine;
+
+    bool isAlive;
 
     void Start()
     {
@@ -40,7 +43,7 @@ public class Movement : MonoBehaviour
 
             if (!audioSource.isPlaying)
             {
-                audioSource.Play();
+                audioSource.PlayOneShot(mainEngine);
             }
 
         }

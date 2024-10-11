@@ -13,9 +13,16 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] private AudioClip obstacleCollisionClip; // Sound for collisions with obstacles or the ground
     [SerializeField] private Image fadeImage; // UI Image for fading transitions
     [SerializeField] private float fadeDuration = 1f; // Duration of fade
+    [SerializeField] AudioClip success;
+    [SerializeField] AudioClip crash;
 
+    AudioSource audioSource;
+
+  
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         // Ensure the fade image is disabled at the start
         if (fadeImage != null)
         {
@@ -53,12 +60,14 @@ public class CollisionHandler : MonoBehaviour
 
     void StartSuccessSequence()
     {
+        audioSource.PlayOneShot(success);
         GetComponent<Movement>().enabled = false;
         Invoke("LoadNextLevel", LevelLoadDelay);
     }
 
     void StartCrashSequence()
     {
+        audioSource.PlayOneShot(crash);
         GetComponent<Movement>().enabled = false;
         Invoke("ReloadLevel", LevelLoadDelay);
     }

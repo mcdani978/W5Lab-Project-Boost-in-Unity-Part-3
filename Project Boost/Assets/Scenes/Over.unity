@@ -359,7 +359,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 88280a8d12ac81c42ad812408cfd52ce, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1409,30 +1409,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocket
       objectReference: {fileID: 0}
-    - target: {fileID: 239636335403751937, guid: 6079a85fe244f8948bc985bd998238fb, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 4803959124054229123, guid: 6079a85fe244f8948bc985bd998238fb, type: 3}
-      propertyPath: transporterClip
+      propertyPath: crash
       value: 
-      objectReference: {fileID: 8300000, guid: e3aad6f800f37634590f204a49f82daf, type: 3}
+      objectReference: {fileID: 8300000, guid: da031e2b6e13d6f479f83430ea18bf9c, type: 3}
     - target: {fileID: 4803959124054229123, guid: 6079a85fe244f8948bc985bd998238fb, type: 3}
-      propertyPath: transportDistance
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4803959124054229123, guid: 6079a85fe244f8948bc985bd998238fb, type: 3}
-      propertyPath: ObstacleCollisions
+      propertyPath: success
       value: 
-      objectReference: {fileID: 8300000, guid: b82c600504500b741a3ff5477b8de3b3, type: 3}
+      objectReference: {fileID: 8300000, guid: 997afe87a109e8d41b363ceac0002b93, type: 3}
     - target: {fileID: 4803959124054229123, guid: 6079a85fe244f8948bc985bd998238fb, type: 3}
       propertyPath: effectsAudioSource
       value: 
-      objectReference: {fileID: 602337130}
+      objectReference: {fileID: 0}
     - target: {fileID: 4803959124054229123, guid: 6079a85fe244f8948bc985bd998238fb, type: 3}
       propertyPath: obstacleCollisionClip
       value: 
-      objectReference: {fileID: 8300000, guid: 88280a8d12ac81c42ad812408cfd52ce, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5833186805917610931, guid: 6079a85fe244f8948bc985bd998238fb, type: 3}
       propertyPath: fuelText
       value: 

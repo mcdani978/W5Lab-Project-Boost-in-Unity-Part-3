@@ -127,6 +127,7 @@ MonoBehaviour:
   fuel: 100
   fuelConsumptionRate: 10
   fuelText: {fileID: 0}
+  mainEngine: {fileID: 8300000, guid: 0f7ea53ed5b002442a59a0cc9216f420, type: 3}
 --- !u!54 &4210549388873826903
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -164,7 +165,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0f7ea53ed5b002442a59a0cc9216f420, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -262,3 +263,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fecbe1b8bde09b4a8dd5620b27d98e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelLoadDelay: 2
+  transportDistance: 3
+  rocketAudioSource: {fileID: 0}
+  effectsAudioSource: {fileID: 0}
+  transporterClip: {fileID: 8300000, guid: e3aad6f800f37634590f204a49f82daf, type: 3}
+  obstacleCollisionClip: {fileID: 8300000, guid: 88280a8d12ac81c42ad812408cfd52ce, type: 3}
+  fadeImage: {fileID: 0}
+  fadeDuration: 1
